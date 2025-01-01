@@ -156,7 +156,7 @@ section {
 
 /* Imagen para el Abogado/a Principal */
 .equipo-card.principal .foto-abogado {
-    background-image: url ('jaun.foto.JPG');
+    background-image: url('jaun.foto.JPG');
 }
 
 /* Imagen para el Asociado/a Senior */
