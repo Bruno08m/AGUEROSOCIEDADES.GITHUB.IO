@@ -144,6 +144,109 @@ body {
 .quienes-somos h2, .quienes-somos p {
     color: white; /* Cambia el color del texto a blanco para mejor contraste */
 }
+/* Estilos para el video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Asegura que el video se ajuste correctamente */
+    @media (max-width: 768px) {
+        /* En dispositivos móviles */
+        height: auto;
+        width: 100%;
+        object-position: top center; /* Ajusta el video a la parte superior */
+    }
+}
+
+/* Estilos para el contenido sobre el video */
+.hero {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    /* Ajusta el tamaño y el espaciado en dispositivos móviles */
+    @media (max-width: 768px) {
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+}
+
+.hero h1, .hero p {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 10px;
+    display: inline-block;
+    font-size: 24px; /* Ajusta el tamaño del texto */
+}
+
+.hero h1 {
+    font-size: 36px;
+    /* Ajusta el tamaño del encabezado en móviles */
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+
+.hero p {
+    font-size: 18px;
+    /* Ajusta el tamaño del párrafo en móviles */
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.btn-hero {
+    background-color: #176ac3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 16px; /* Ajusta el tamaño del botón */
+    /* Ajusta el tamaño del botón en móviles */
+    @media (max-width: 768px) {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Logo */
+.logo img {
+    width: 60px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .video-background {
+        height: auto; /* Asegura que el video sea responsivo */
+        object-position: top center;
+    }
+
+    .hero {
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Reduce el tamaño del título */
+    }
+
+    .hero p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+    }
+
+    .btn-hero {
+        font-size: 14px; /* Ajusta el tamaño del botón */
+        padding: 8px 16px;
+    }
+}
 
 .btn-hero:hover {
     background-color: #16a085;
