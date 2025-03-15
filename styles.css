@@ -16,9 +16,9 @@ body {
 
 /* Header */
 .header {
-    background-color: #000000;
-    color: #fff;
-    padding: 20px 0;
+    position: relative;
+    background-color: transparent;
+    padding: 10px 0;
 }
 
 .nav-container {
@@ -31,7 +31,32 @@ body {
     font-size: 25px;
     font-weight: bold;
 }
+/* Estilo para el logo */
+.logo {
+    background-color: transparent; /* Fondo transparente */
+    padding: 0; /* Sin padding extra */
+    display: inline-block; /* Permite que el logo se comporte como un bloque en línea */
+}
 
+/* Tamaño inicial del logo */
+#logo {
+    width: 180px; /* Tamaño inicial del logo (ajusta a tu preferencia) */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Efecto de hover para hacer el logo más grande cuando se pasa el mouse */
+#logo:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del logo al 120% */
+    transition: transform 0.3s ease; /* Suaviza el efecto de la animación */
+}
+
+/* Fondo transparente para la sección "Quiénes Somos" */
+.quienes-somos {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+}
 .nav-menu {
     list-style: none;
     display: flex;
@@ -47,142 +72,87 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    padding: 10px 30px;
+    display: inline-block;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #1abc9c;
+    color: #176ac3;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
 }
 
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    z-index: 2;
     color: #fff;
-    padding: 100px 0;
     text-align: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.btn-hero {
-    background-color: #1abc9c;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-/* Estilo para la barra de navegación */
-.header {
-    position: relative;
-    background-color: transparent; /* Fondo transparente para la barra */
-    padding: 10px 0; /* Espaciado en la barra */
-}
-
-/* Estilo para la barra de navegación */
-.header {
-    position: relative;
-    background-color: transparent; /* Fondo transparente para la barra */
-    padding: 10px 0; /* Espaciado en la barra */
-}
-/* Estilo para la barra de navegación */
-.header {
-    position: relative;
-    background-color: transparent; /* Fondo transparente para la barra */
-    padding: 10px 0; /* Espaciado en la barra */
-}
-
-/* Estilo para los enlaces del menú */
-.nav-menu li a {
-    color: rgb(255, 255, 255); /* Cambia el color del texto a blanco */
-    font-weight: bold; /* Hace el texto más GRANDE */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    padding: 10px 30px; /* Añade espacio alrededor de los enlaces */
-    display: inline-block; /* Hace que los enlaces sean bloques en línea */
-    transition: color 0.3s ease; /* Suaviza el cambio de color al pasar el mouse */
-}
-
-/* Efecto de hover para los enlaces */
-.nav-menu li a:hover {
-    color: #176ac3; /* Cambia el color a un tono azul cuando se pasa el mouse */
-}
-
-/* Estilo para el logo */
-.logo {
-    background-color: transparent; /* Fondo transparente */
-    padding: 0; /* Sin padding extra */
+.hero h1, .hero p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
     display: inline-block;
 }
 
-/* Tamaño inicial del logo */
-#logo {
-    width: 180px; /* Tamaño inicial del logo (ajusta a tu preferencia) */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Elimina el espacio debajo de la imagen */
+.hero h1 {
+    font-size: 36px;
 }
 
-/* Efecto de hover para hacer el logo más grande cuando se pasa el mouse */
-#logo:hover {
-    transform: scale(1.2); /* Aumenta el tamaño del logo al 120% */
-    transition: transform 0.3s ease; /* Suaviza el efecto */
+.hero p {
+    font-size: 18px;
 }
 
-/* Fondo transparente para la sección "Quiénes Somos" */
-.quienes-somos {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados (opcional) */
-}
-
-.quienes-somos h2, .quienes-somos p {
-    color: white; /* Cambia el color del texto a blanco para mejor contraste */
+.btn-hero {
+    background-color: #176ac3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 .btn-hero:hover {
-    background-color: #16a085;
-}
-/* Cambiar el color de "Áreas de Práctica" a blanco */
-.areas-practica h2 {
-    color: white; /* Cambia el color del texto a blanco */
-}
-/* Cambiar el color de "Nuestro Equipo" a blanco */
-.equipo h2 {
-    color: white; /* Cambia el color del texto a blanco */
-}
-/* Cambiar el color de "Noticias & Artículos" a blanco */
-.noticias h2 {
-    color: white; /* Cambia el color del texto a blanco */
-}
-/* Cambiar el color de "Contacto" y el párrafo correspondiente a blanco */
-.contacto h2, .contacto p {
-    color: white; /* Cambia el color del texto a blanco */
+    background-color: #128c7e;
 }
 
-
-
-
+/* Video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
 /* Quiénes Somos */
 .quienes-somos {
     padding: 60px 0;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .quienes-somos h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .quienes-somos p {
     font-size: 18px;
     margin-bottom: 40px;
+    color: white;
 }
 
 .video-container {
@@ -191,7 +161,7 @@ body {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #ffffff;
+    background: #000;
 }
 
 .video-container iframe {
@@ -202,16 +172,6 @@ body {
     height: 100%;
 }
 
-/* Estilos para las imágenes de los miembros */
-.equipo-card img.equipo-img {
-    width: 150px; /* Tamaño fijo para las imágenes */
-    height: 150px; /* Tamaño fijo para las imágenes */
-    border-radius: 50%; /* Hace que las imágenes sean circulares */
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
-    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
-}
-
-
 /* Áreas de Práctica */
 .areas-practica {
     padding: 60px 0;
@@ -221,6 +181,7 @@ body {
 .areas-practica h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    color: white;
 }
 
 .grid-areas {
@@ -270,6 +231,7 @@ body {
 .equipo h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    color: white;
 }
 
 .grid-equipo {
@@ -293,12 +255,12 @@ body {
     transform: translateY(-10px);
 }
 
-.foto-abogado {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
+.equipo-card img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin: 0 auto 20px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .equipo-card h3 {
@@ -320,6 +282,7 @@ body {
 .noticias h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    color: white;
 }
 
 .grid-noticias {
@@ -374,11 +337,13 @@ body {
 .contacto h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .contacto p {
     font-size: 18px;
     margin-bottom: 40px;
+    color: white;
 }
 
 .contacto form {
@@ -424,7 +389,7 @@ body {
     color: #fff;
     width: 80px;
     height: 80px;
-    border-radius: 70%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,176 +418,33 @@ body {
     margin: 0;
     font-size: 14px;
 }
-/* Estilos para el video de fondo */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    /* Asegura que el video se ajuste correctamente */
-    @media (max-width: 768px) {
-        /* En dispositivos móviles */
-        height: auto;
-        width: 100%;
-        object-position: top center; /* Ajusta el video a la parte superior */
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 30%;
+        padding-bottom: 30%;
     }
-}
 
-/* Estilos para el contenido sobre el video */
-.hero {
-    position: relative;
-    z-index: 2;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 30%;
-    padding-bottom: 30%;
-    /* Ajusta el tamaño y el espaciado en dispositivos móviles */
-    @media (max-width: 768px) {
-        padding-top: 20%;
-        padding-bottom: 20%;
-    }
-}
-
-.hero h1, .hero p {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-    padding: 10px;
-    display: inline-block;
-    font-size: 24px; /* Ajusta el tamaño del texto */
-}
-
-.hero h1 {
-    font-size: 36px;
-    /* Ajusta el tamaño del encabezado en móviles */
-    @media (max-width: 768px) {
+    .hero h1 {
         font-size: 28px;
     }
-}
 
-.hero p {
-    font-size: 18px;
-    /* Ajusta el tamaño del párrafo en móviles */
-    @media (max-width: 768px) {
+    .hero p {
         font-size: 16px;
     }
-}
 
-.btn-hero {
-    background-color: #176ac3;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    font-size: 16px; /* Ajusta el tamaño del botón */
-    /* Ajusta el tamaño del botón en móviles */
-    @media (max-width: 768px) {
+    .btn-hero {
         font-size: 14px;
         padding: 8px 16px;
     }
-}
-/* Estilos para el video de fondo */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Asegura que el video cubra todo el fondo */
-    z-index: -1;
-}
 
-/* Asegura que el contenido se ajuste adecuadamente en pantallas pequeñas */
-.hero {
-    position: relative;
-    z-index: 2;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 20%; /* Ajusta el padding para pantallas pequeñas */
-}
-
-.hero h1, .hero p {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-    padding: 10px;
-    display: inline-block;
-}
-
-.btn-hero {
-    background-color: #176ac3;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.btn-hero:hover {
-    background-color: #176ac3;
-}
-
-/* Ajustes en la sección header para navegación responsiva */
-.header .nav-menu {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    flex-wrap: wrap;
-}
-
-.nav-menu li {
-    list-style: none;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-
-/* Asegurando que los textos sean legibles en pantallas pequeñas */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 24px; /* Ajusta el tamaño de texto para móviles */
-    }
-    .hero p {
-        font-size: 16px; /* Ajusta el tamaño del párrafo */
-    }
-    .btn-hero {
-        font-size: 14px; /* Ajusta el tamaño del botón */
-    }
-}
-
-/* Logo */
-.logo img {
-    width: 60px; /* Ajusta el tamaño de la imagen */
-    height: auto;
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    .video-background {
-        height: auto; /* Asegura que el video sea responsivo */
-        object-position: top center;
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero {
-        padding-top: 20%;
-        padding-bottom: 20%;
-    }
-
-    .hero h1 {
-        font-size: 28px; /* Reduce el tamaño del título */
-    }
-
-    .hero p {
-        font-size: 16px; /* Reduce el tamaño del texto */
-    }
-
-    .btn-hero {
-        font-size: 14px; /* Ajusta el tamaño del botón */
-        padding: 8px 16px;
+    .nav-menu li {
+        margin: 10px 0;
     }
 }
