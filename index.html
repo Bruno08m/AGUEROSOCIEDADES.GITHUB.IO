@@ -1,40 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Despacho AGÜERO & HIERRO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Despacho AGUERO & HIERRO - Inspirado en TozziniFreire</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-... (actualiza con la última versión)" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Estilos para el contenido sobre el video */
+        .hero {
+            position: relative;
+            z-index: 2;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 30%;
+        }
+
+        .hero h1, .hero p {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .btn-hero {
+            background-color: #176ac3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn-hero:hover {
+            background-color: #176ac3;
+        }
+
+        /* Estilos para el logo */
+        .logo img {
+            width: 50px; /* Ajusta el tamaño de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        
+    </style>
 </head>
 <body>
-    <div class="video-background-container">
-        <video class="video-background" autoplay muted loop playsinline>
-            <source src="despacho.mp4" type="video/mp4">
-            <source src="despacho.webm" type="video/webm">
-            Tu navegador no soporta el video.
-        </video>
-    </div>
-    <header class="header">
-        <div class="container nav-container">
-            <!-- Logo con imagen solamente  -->
-            <a href="logo" class="logo">
-                <img src="LOGO OFICIAL ESTUDIO JURIDIC .png" alt="logo" id="logo">
-            </a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                    <li><a href="#areas-practica">Áreas de Práctica</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
-                    <li><a href="#noticias">Noticias & Artículos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-               </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="despacho.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <header class="header">
+        <div class="container nav-container">
+            <!-- Logo con imagen -->
+            <a href="#" class="logo">
+                <img src="LOGO OFICIAL ESTUDIO JURIDIC .png" alt="Logo" id="logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="#areas-practica">Áreas de Práctica</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#noticias">Noticias & Artículos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+
     <section class="hero">
         <div class="container hero-content">
             <h1>ESTUDIO JURIDICO AGUERO & HIERRO</h1>
@@ -77,7 +127,6 @@
             </div>
         </div>
     </section>
-
     <section id="equipo" class="equipo">
         <div class="container">
             <h2>Nuestro Equipo</h2>
@@ -89,17 +138,18 @@
                 </div>
                 <div class="equipo-card senior">
                     <img src="abogado 2.jpg" alt="Funes Francisco" class="equipo-img">
-                    <h3>FUNES AGUERO FRANCISCO</h3>
-                    <p>Con mas de 10 años de especializado en Derecho Sucesorio. Y con una amplia trayectoria en asesoramiento y representación en procesos testamentario, herencias y particiones. Consiliando disputas hereditarias y en la elaboración de estrategias que garanticen la protección y el cumplimiento de la voluntad testamentaria.</p>
+                    <h3>FUNES FRANCISCO</h3>
+                    <p>Con mas de 10 años de  especializado en Derecho Sucesorio. Y con  una amplia trayectoria en asesoramiento y representación en procesos testamentario, herencias y particiones. Consiliando disputas hereditarias y en la elaboración de estrategias que garanticen la protección y el cumplimiento de la voluntad testamentaria.</p>
                 </div>
                 <div class="equipo-card junior">
                     <img src="bruno.jpg" alt="Aguero Bruno" class="equipo-img">
                     <h3>AGUERO BRUNO</h3>
-                    <p>Especialista en gestión de beneficios diferenciales para el personal Aéreo 🛫 (pilotos y TCP) de diversas empresas como (A.A) (A.M) (FB) (Jetsmart), así como para el personal de la INDUSTRIA PETROLERA y PORTUARIA (MARINO MERCANTES) , entre otros, diligenciamientos y asesoramiento a empresas y particulares.</p>
+                    <p>Especialista en gestión de beneficios diferenciales para el personal Aéreo 🛫 (pilotos y TCP) de diversas empresas como (A.A) (A.M) (FB) (Jetsmart), así como para el personal de la INDUSTRIA PETROLERA y PORTUARIA (MARINO MERCANTES) , entre otros, diligenciamientos y tramitación de procedimientos.</p>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="noticias" class="noticias">
         <div class="container">
@@ -108,7 +158,7 @@
                 <article class="noticia-card">
                     <h3>PREVISIONAL</h3>
                     <p>Te ayudamos a obtener la mejor Jubilación que te corresponde.</p>
-                    <a href="#">Leer más</a>
+                    <a href="#">Leer más</a> 
                 </article>
                 <article class="noticia-card">
                     <h3>DERECHO LABORAL</h3>
@@ -138,7 +188,8 @@
                 <input type="email" name="email" placeholder="Correo electrónico" required>
                 <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
                 <button type="submit">Enviar</button>
-                <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html"> 
                 <input type="hidden" name="_captcha" value="false">
             </form>
         </div>
