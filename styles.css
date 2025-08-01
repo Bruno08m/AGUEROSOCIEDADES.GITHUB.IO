@@ -27,42 +27,37 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
-/* Estilo para el logo */
-.logo {
-    background-color: transparent; /* Fondo transparente */
-    padding: 0; /* Sin padding extra */
-    display: inline-block; /* Permite que el logo se comporte como un bloque en línea */
-}
-
-/* Tamaño inicial del logo */
-#logo {
-    width: 180px; /* Tamaño inicial del logo (ajusta a tu preferencia) */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina el espacio de la imagen */
-}
-
-/* Efecto de hover para hacer el logo más grande cuando se pasa el mouse */
-#logo:hover {
-    transform: scale(1.2); /* Aumenta el tamaño del logo al 120% */
-    transition: transform 0.3s ease; /* Suaviza el efecto de la animación */
+/* Estilos del encabezado */
 .header {
     position: fixed;
     width: 100%;
+    /* Eliminamos el background-color para que sea transparente */
+    background-color: transparent;
     color: white;
     z-index: 100;
 }
+
+/* Estilos para el logo y su imagen */
+.logo {
+    /* Aquí definimos la sombra de texto para que el logo se lea mejor */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-/* Fondo transparente para la sección "Quiénes Somos" */
-.quienes-somos {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados (opcional) */
+#logo {
+    width: 180px;
+    height: auto;
+    display: block;
+    /* Aplicamos un filtro de sombra a la imagen del logo */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
 }
+
+/* Efecto de hover para el logo */
+#logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el menú de navegación */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -81,18 +76,15 @@ body {
     padding: 10px 30px;
     display: inline-block;
     transition: color 0.3s ease;
+    /* Sombra de texto para mejorar la legibilidad */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .nav-menu a:hover {
     color: #176ac3;
 }
 
-.logo img {
-    width: 60px;
-    height: auto;
-}
-
-/* Hero Section */
+/* Estilos para la sección Hero (que está sobre el video) */
 .hero {
     position: relative;
     z-index: 2;
@@ -103,7 +95,7 @@ body {
 }
 
 .hero h1, .hero p {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Mantenemos el fondo semitransparente para el texto */
     padding: 10px;
     display: inline-block;
 }
