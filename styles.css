@@ -42,13 +42,19 @@ body {
 #logo {
     width: 180px; /* Tamaño inicial del logo (ajusta a tu preferencia) */
     height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina el espacio debajo de la imagen */
+    display: block; /* Elimina el espacio de la imagen */
 }
 
 /* Efecto de hover para hacer el logo más grande cuando se pasa el mouse */
 #logo:hover {
     transform: scale(1.2); /* Aumenta el tamaño del logo al 120% */
     transition: transform 0.3s ease; /* Suaviza el efecto de la animación */
+.header {
+    position: fixed;
+    width: 100%;
+    color: white;
+    z-index: 100;
+}
 }
 
 /* Fondo transparente para la sección "Quiénes Somos" */
