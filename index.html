@@ -60,30 +60,37 @@
 </head>
 <body>
  
-    <!-- Video de fondo -->
-   <video class="video-background" autoplay muted loop playsinline>
-        <source src="despacho.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
+  <!-- Video de fondo -->
+<video 
+  class="video-background" 
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  webkit-playsinline 
+  preload="auto"
+>
+  <source src="despacho.mp4" type="video/mp4">
+  Tu navegador no soporta la etiqueta de video.
+</video>
 
-    <header class="header">
-        <div class="container nav-container">
-            <!-- Logo con imagen -->
-            <a href="#" class="logo">
-                <img src="LOGO OFICIAL ESTUDIO JURIDIC .png" alt="Logo" id="logo">
-            </a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                    <li><a href="#areas-practica">Áreas de Práctica</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
-                    <li><a href="#noticias">Noticias & Artículos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
+<script>
+// Forzar reproducción automática en iOS/Android
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".video-background");
+  if (video) {
+    video.muted = true;
+    video.play().catch(() => {
+      // En caso de que el navegador lo bloquee, 
+      // se puede disparar con una interacción mínima del usuario
+      document.body.addEventListener("touchstart", () => {
+        video.play();
+      }, { once: true });
+    });
+  }
+});
+</script>
+
     
 
     <section class="hero">
