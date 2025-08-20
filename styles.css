@@ -167,7 +167,20 @@ body {
     max-width: 100%;
     background: #000;
 }
+/* Agrega esto a tu <style> en el <head> o a tu archivo styles.css */
 
+body {
+    /* Ruta a una imagen que sirva de fondo si el video falla */
+    background-image: url('ruta/a/tu/imagen-de-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Ocultar el video si JavaScript detecta que no se puede reproducir */
+.video-background[style*="display: none"] {
+    display: none !important;
+}
 .video-container iframe {
     position: absolute;
     top: 0;
